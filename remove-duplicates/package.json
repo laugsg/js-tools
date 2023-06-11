@@ -1,0 +1,23 @@
+{
+  "name": "remove-duplicates",
+  "version": "0.0.1",
+  "description": "JS tool to remove duplicated lines",
+  "bin": {
+    "savings": "savings.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js-tools",
+    "remove-duplicates"
+  ],
+  "author": "lau",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^10.0.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0"
+  }
+}
