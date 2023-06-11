@@ -15,27 +15,14 @@ class Lists {
       this.words = data.split(/\s+/);
 
       if (options.duplicates) {
-        try {
-          this.output = this.duplicates();
-          logger.win(`Duplicates removed at ${outputFile}`);
-        } catch (error) {
-          logger.err("options.duplicates fails", __filename, error);
-        }
+        this.output = this.duplicates();
+        logger.win(`Duplicates removed at ${outputFile}`);
       } else if (options.clean) {
-        try {
-          this.output = this.clean();
-          logger.win(`Duplicates reduced to one sample at ${outputFile}`);
-        } catch (error) {
-          logger.err("options.clean fails", __filename, error);
-        }
+        this.output = this.clean();
+        logger.win(`Duplicates reduced to one sample at ${outputFile}`);
       } else {
-        try {
-          logger.msg("unflaged action: default", __filename);
-          this.output = this.duplicates();
-          logger.win(`Duplicates removed at ${outputFile}`);
-        } catch (error) {
-          logger.err("unflaged action fails", __filename, error);
-        }
+        this.output = this.duplicates();
+        logger.msg(`unflaged action: duplicates removed at ${outputFile}`);
       }
 
       fs.writeFileSync(outputFile, this.output);
@@ -83,11 +70,6 @@ class Lists {
     } catch (error) {
       logger.err("clean method fails", __filename, error);
     }
-  }
-  restart() {
-    this.words = [];
-    this.words = [];
-    this.words = [];
   }
 }
 
