@@ -1,10 +1,40 @@
-# CLI tools: removing duplicate lines
+# CLI tools: removing duplicate words
 
-JS tool to removing duplicate lines.
+A frenetic research along half minute reveals that the most common case found was about to get a list where duplicates are reduced to one sample of the duplicated word.
 
-* default 
-    * input: provide a filepath with words to be checked
-    * output: new file just with no matched words
+```txt
+### most common case
+// list
+abbrev
+abbrev
+anymatch
+anymatch
+undefsafe
+
+// result
+abbrev
+anymatch
+undefsafe
+```
+
+This tool comes to fill the gap about to get a list where a word that match a word both are removed, the word and its duplicate. 
+
+```txt
+### a list without duplicated words.
+// list
+abbrev
+abbrev
+anymatch
+anymatch
+undefsafe
+
+// result
+undefsafe
+```
+
+## A Commander.js CLI command
+
+Commander.js is a tool running over Node linked to the "bin" field of the package.json file of the project. Then, It becomes a Node app which allows a "kind a shell" look-and-feel execution system agnostic across any system supporting NodeJS.
 
 ## Installation && Usage
 

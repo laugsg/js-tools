@@ -9,7 +9,7 @@ class Logger {
   }
 
   msg(msg, filepath = '') {
-    console.info(`>>>> ${msg} ${filepath && `| ${path.basename(filepath)} `}| ${new Date().toISOString()}`.cyan);
+    console.info(`>>>> ${msg} ${filepath && `| ${path.basename(filepath)} `}`.cyan);
   }
 
   win(msg, filepath = '') {

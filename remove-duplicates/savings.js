@@ -18,7 +18,7 @@ program
   )
   .argument("<file>", "word's list source")
   .action((file, options) => {
-    Lists.duplicates(file, options)
+    Lists.options(file, options)
   });
 
 program.parse(process.argv);
